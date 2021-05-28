@@ -230,6 +230,9 @@ body {
   list-style-type: none;
 }
 /* Наша команда */
+.our-team{
+  margin-bottom: 94px;
+}
 .team-list {
   margin: 0;
   display: flex;
