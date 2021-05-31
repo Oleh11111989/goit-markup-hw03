@@ -6,6 +6,9 @@ ul {
   padding: 0;
   margin: 0;
 }
+img {
+  display: block;
+}
 *,
 *::before,
 *::after {
@@ -37,7 +40,7 @@ body {
 }
 
 .head-section {
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
   display: flex;
   align-items: center;
 }
@@ -129,7 +132,7 @@ body {
 .hero {
   text-align: center;
   padding-top: 200px;
-  padding-bottom: 280px;
+  padding-bottom: 200px;
   background-color: #2f303a;
 }
 .hero-title {
@@ -137,7 +140,7 @@ body {
   margin-left: auto;
   width: 696px;
   margin-top: 0;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   text-transform: uppercase;
   color: var(--background-color);
   font-style: normal;
@@ -169,7 +172,6 @@ body {
 }
 /* Преимущества */
 .adv-title {
-  color: transparent;
   margin: 0;
 }
 .list-adv {
@@ -191,6 +193,7 @@ body {
   list-style-type: none;
 }
 .advantages-title {
+  margin-top: 0;
   margin-bottom: 10px;
   font-style: normal;
   font-weight: 700;
@@ -218,7 +221,7 @@ body {
 .section-title {
   text-align: center;
   margin: 0;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -250,6 +253,7 @@ body {
   margin-right: 30px;
 }
 .members-name {
+  text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -270,15 +274,19 @@ body {
 /* Портфолио */
 
 /* Кнопки */
+.portf-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .button-head {
   justify-content: center;
   text-align: center;
   display: flex;
   list-style-type: none;
-  padding-top: 94px;
-  padding-bottom: 50px;
+  /* padding-top: 94px; */
+  margin-bottom: 50px;
 }
-.button-list:not(:last-child){
+.button-list:not(:last-child) {
   margin-right: 8px;
 }
 .project-button {
@@ -299,17 +307,15 @@ body {
 }
 
 .projects-list {
-  padding-bottom: 94px;
-  margin-right: calc(-1 * var(--card-set-gap));
-  margin-bottom: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
   flex-wrap: wrap;
   display: flex;
 }
 .project-list-item {
-  margin-right: var(--card-set-gap);
-  margin-bottom: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
   flex-basis: calc(100% / 3 - var(--card-set-gap));
-
 }
 .project-list img {
   display: block;
@@ -330,10 +336,12 @@ body {
   line-height: 1.88;
   color: var(--secondary-text-color);
 }
-.card{
+.card {
+  text-align: center;
   margin: 0;
   padding: 20px 24px;
-  border: 1px solid #EEEEEE ;
+  border-top: none;
+  border: 1px solid #eeeeee;
 }
 /* Подвал */
 .color-footer {
@@ -347,7 +355,6 @@ body {
 }
 .color-footer .logo {
   padding: 0;
-  display: block;
   margin-bottom: 20px;
 }
 .address-link {
@@ -364,8 +371,24 @@ body {
   line-height: 1.71;
   color: var(--background-color);
 }
-.footer-contacts .nav-list .contacts {
+.nav-list-footer {
+  list-style-type: none;
+}
+.nav-list-footer:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-contacts .nav-list-footer .secondary-contacts {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
   padding: 0;
   margin: 0;
   color: rgba(255, 255, 255, 0.6);
+}
+.secondary-contacts:hover,
+.secondary-contacts:focus{
+  color: var(--highlight-color);
 }
